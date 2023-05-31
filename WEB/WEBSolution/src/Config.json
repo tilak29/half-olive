@@ -1,0 +1,102 @@
+{
+  "appConfig": {
+    "dateFormatForGrid": "DD-MMM-YYYY",
+    "dateFormat": "DD/MM/YYYY",
+    "dateFormatForPicker": "dd-MMM-yyyy",
+    "dbDateFormat": "YYYY-MM-DD",
+    "dbDateTimeFormat": "YYYY-MM-DD HH:mm:ss",
+    "dateTimeFormatForPicker": "dd-MMM-yyyy HH:mm:ss",
+    "dateTimeFormatForPrintStamp": "DD-MMM-YYYY, HH:mm:ss A",
+    "APIVersion": "3.1.0",
+    "APITimeout": 60000,
+    "APITimeoutMessage": "Server not reachable. Please contact Admin."
+  },
+  "aws": {
+    "accessKeyId": "AKIAIRN34JII2SJPXU2Q",
+    "secretAccessKey": "NZRbw+6BXpPUiA32432YR7SZQYonwcJN5dhVzC2",
+    "bucket": "file-upload-reveation-qa"
+  },
+  "isActiveOptions": [
+    {
+      "label": "Yes",
+      "value": "1"
+    },
+    {
+      "label": "No",
+      "value": "0"
+    }
+  ],
+  "uom": [
+    {
+      "label": "Purchase",
+      "value": "Purchase"
+    },
+    {
+      "label": "Box",
+      "value": "Box"
+    }
+  ],
+  "labels": {
+    "saveButton": "Save",
+    "cancelButton": "Cancel",
+    "filterButton": "Go",
+    "resetButton": "Reset",
+    "backButton": "Back",
+    "searchButton":"Search",
+    "addMore":"Add More",
+    "clearButton":"Clear",
+    "confirmBooking":"Confirm Booking",
+    "addanother":"Add Another",
+    "saveandclose":"Save&Close",
+    "viewotherbooking":"View Other Booking"
+  },
+  "staticDataId": {
+    "EmployeeStatus_Resigned": 10,
+    "EmployeeStatus_Inactive": 9,
+    "EmployeeStatus_Active": 8,
+    "Country_India": 1,
+    "Leave_Status_Request": 28,
+    "Leave_Status_Reject": 30,
+    "Leave_Status_Approved": 29,
+    "TourPlan_Approved": 34,
+    "TourPlan_Rejected": 35,
+    "UnlockDCR_Approved": 38,
+    "UnlockDCR_Rejected": 39,
+    "UnlockDCR_Request": 37,
+    "EXPENSE_Approved": 42,
+    "EXPENSE_Rejected": 43,
+    "EXPENSE_Submitted": 41,
+    "Registration_Requested": 65,
+    "Registration_Approved": 66,
+    "Registration_Rejected": 67,
+    "Scheme_Purchase": 16,
+    "Scheme_Box": 17,
+    "Scheme_Quantity": 61,
+    "InvoiceStatus_Pending": 85,
+    "InvoiceStatus_Correction": 86,
+    "InvoiceStatus_Verified": 87,
+    "InvoiceStatus_Approved": 88,
+    "InvoiceStatus_Rejected": 89,
+    "InvoiceStatus_Duplicate": 91,
+    "RedemptionStatus_Requested": 77,
+    "RedemptionStatus_Approved": 79,
+    "RedemptionStatus_Rejected": 83,
+    "RedemptionStatus_Dispatched": 80,
+    "RedemptionStatus_Delivered": 81,
+    "ChemistProfile_Requested": 94,
+    "ChemistProfile_Approved": 95,
+    "ChemistProfile_Rejected": 96,
+    "OrderStatus_Pending":45,
+    "OrderStatus_Accepted":46,
+    "OrderStatus_Delivered":47,
+    "OrderStatus_Rejected":48,
+    "Book_Status_Booked": 128,
+    "Book_Status_CheckedIn" : 129,
+    "Book_Status_CheckedOut" : 130,
+    "Single_Occupancy" : 156,
+    "Double_Occupancy" : 156,
+    "Triple_Occupancy" : 156,
+    "Extra_Occupancy" : 156
+  },
+  "staticImagePath": "/static/media/Placeholder.34453119.svg"
+}

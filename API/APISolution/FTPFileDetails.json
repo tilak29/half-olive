@@ -1,0 +1,67 @@
+{
+	"FtpFilesToRead": [
+		{
+			"FileName": "005_Date.txt",
+			"RequiredTruncate": false,
+			"TableName": "",
+			"TableFields": "",
+			"IsActive": false
+		},
+		{
+			"FileName": "010_CFA.txt",
+			"RequiredTruncate": true,
+			"TableName": "ftpdepot",
+			"TableFields": "DepotCode, Name, ShortName, ContactPerson, Address1, Address2, Address3, PIN, Email, Mobile, Mobile2, Phone, Fax, Place, State",
+			"DateFieldsToConvert": [],
+			"IsActive": true
+		},
+	  	{
+			"FileName": "020_CUST.txt",
+			"RequiredTruncate": true,
+			"TableName": "ftpcustomer",
+			"TableFields": "CustCode, Name, ShortName, ContactPerson, Address1, Address2, Address3, PIN, Email, Mobile, Mobile1, Phone, Fax, Place, State, DepotCode, DLNumber1, DLNumber2, GSTNumber, CSTNumber",
+			"DateFieldsToConvert": [],
+			"IsActive": false
+	  	},
+	  	{
+			"FileName": "025_DIV.txt",
+			"RequiredTruncate": true,
+			"TableName": "ftpdivision",
+			"TableFields": "DivisionCode, DivisionName",
+			"DateFieldsToConvert": [],
+			"IsActive": true
+	  	},
+	  	{
+			"FileName": "030_ITEM.txt",
+			"RequiredTruncate": true,
+			"TableName": "ftpitems",
+			"TableFields": "ItemCategory, ItemGroup, ItemCode, ItemName, ShortName, Division, ContentName, ItemType, Packing, PackType, LockValue",
+			"DateFieldsToConvert": [],
+			"IsActive": true
+	  	},
+	  	{
+			"FileName": "050_SALES.txt",
+			"RequiredTruncate": true,
+			"TableName": "ftpsales",
+			"TableFields": "DepotCode, MonthValue, YearValue, Division, StockistCode, ProductCode, TranType, Qty, FreeQty, ReplQty, NetAmount, GrossAmount, FreeNetAmount, FreeGrossAmount",
+			"DateFieldsToConvert": [],
+			"IsActive": true
+	  	},
+	  	{
+			"FileName": "060_Stock.txt",
+			"RequiredTruncate": true,
+			"TableName": "ftpstock",
+			"TableFields": "DepotCode, ProductCode, DateValue, BatchNo, MfgDate, ExpDate, MRP, Rate, Qty, Value, BrkQty, BrkValue, GITQty, GITValue",
+			"DateFieldsToConvert": [2,4,5],
+			"IsActive": true
+	  	},
+	  	{
+			"FileName": "070_OutSt.txt",
+			"RequiredTruncate": true,
+			"TableName": "ftpoutstanding",
+			"TableFields": "DepotCode, StockistCode, CustomerName, TranType, InvoiceNumber, InvoiceDate, LRDate, DueDate, InvoiceValue",
+			"DateFieldsToConvert": [5,6,7],
+			"IsActive": true
+	  	}
+	]
+  }

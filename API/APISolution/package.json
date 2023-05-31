@@ -1,0 +1,63 @@
+{
+  "name": "pharmasolutionapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node --max-old-space-size=10240 index",
+    "dev": "npx supevisor index.js",
+    "apidoc": "apidoc i src/ -e node_modules o doc/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apidoc": "^0.19.1",
+    "aws-sdk": "^2.928.0",
+    "axios": "^0.19.2",
+    "bluebird": "^3.7.2",
+    "case-converter": "^1.0.1",
+    "compression": "^1.7.4",
+    "convert-excel-to-json": "^1.6.1",
+    "cors": "^2.8.5",
+    "crypto-js": "^3.1.9-1",
+    "exceljs": "^3.8.1",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6",
+    "file-type": "^14.1.4",
+    "firebase-admin": "^8.9.2",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "https": "^1.0.0",
+    "js2xml": "^1.0.9",
+    "jsonwebtoken": "^8.5.1",
+    "log4js": "^6.1.0",
+    "mime-types": "^2.1.35",
+    "moment": "^2.24.0",
+    "mssql": "^7.3.0",
+    "mysql": "^2.17.1",
+    "node-geocoder": "^3.27.0",
+    "node-input-validator": "^4.1.0",
+    "nodemailer": "^6.4.2",
+    "path": "^0.12.7",
+    "paytmchecksum": "^1.5.0",
+    "read-chunk": "^3.2.0",
+    "ssh2-sftp-client": "^6.0.1",
+    "xml-js": "^1.6.11"
+  },
+  "apidoc": {
+    "name": "Pharma Solution API",
+    "url": "http://localhost:789",
+    "description": "This is documentation of Pharma Solution\n<b>Unit Environment : </b>Use <b>10.37.54.153 </b>instead of <b>localhost</b>"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "supertest": "^4.0.2"
+  }
+}

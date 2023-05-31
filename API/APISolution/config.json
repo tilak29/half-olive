@@ -1,0 +1,88 @@
+{
+  "serverPort": 789,
+  "serverDomain": "http://localhost",
+  "db": {
+    "server": "192.168.1.73",
+    "user": "sa",
+    "password": "sa123",
+    "database": "Wellness",
+    "port": 1433,
+    "options": {
+      "encrypt": true,
+      "trustServerCertificate": true,
+      "cryptoCredentialsDetails": {
+        "minVersion": "TLSv1"
+      }
+    }
+    },
+  "jwt": {
+    "audience": "jwt-authorization",
+    "issuer": "www.reveation.com",
+    "expiretime": "540",
+    "tokenTimeIn": "minutes",
+    "refrshIntervalInMs": "1080000",
+    "publicAPITokenExpiretime": "365",
+    "publicAPITokenTimeIn": "d",
+    "publicAPIKey": "reveation.com"
+  },
+  "transporterConfig": {
+    "host": "mail.reveation.com",
+    "port": 587,
+    "auth": {
+      "user": "chatbot@reveation.net",
+      "pass": "sfsd4t9W"
+    }
+  },
+  "aws": {
+    "accessKeyId": "AKIAIRNNTJIIfsdf2SJPXU2Q",
+    "secretAccessKey": "NZRbw+6sdfsdfrBXpPUiADBAMFrYR7SZQYonwcJN5dhVzC2",
+    "bucket": "file-upload-reveation-qa"
+  },
+  "EncryptionDecryptionKey": "P@ssw0rd12",
+  "credentialEncryptionDecryptionKey": "superUserReveation",
+  "ProjectStartDate": "2021-06-01",
+  "CompanyId": 1,
+  "CountryId": 1,
+  "staticData": { "EmployeeStatus_Active": 8, "UnlockDCRStatus_Request": 37 },
+  "ReportingPeriod": 1,  
+  "IsFirstTimePasswordChanged": 0,
+  "bufferTimeForServerDateInMinute": 15,
+  "imageFolderName": { "mainFolderName": "/uploaded_data/", "innerFolder": "/guest/"},
+  "ZENSMS": {
+    "url": "http://alerts.sinfini.com/api/v3/index.php?method=sms.json&api_key=A3eaa287ree39d07e7c0599e5c33e58fedd18",
+    "method": "sms.json",
+    "api_key": "A3eaa2879d07e7c05e3499e5c33e58fedd18",
+    "sender": "Reveation",
+    "messagePrefix": "This message is from Reveation Pvt. Ltd."
+  },
+  "Environment":"Dev",
+  "payTM":{
+    "MerchantID":"Reveation6254842997490",
+    "MerchantKey":"Nar&JWGpeDreOQreUbU",
+    "SubwalletGuid":"768b3cdc-f42e-1r3a-b654-fa163e429e83",
+    "HostName":"staging-dashboard.paytm.com",
+    "WalletTransferType":"gratification"
+  },
+  "RestrictedMode":
+  {
+    "isRestricted":false,
+    "usersMobNoListToAccessAppOnRestriction":["9925118796"]
+  },
+  "FTP":{
+    "host": "reveation.org",
+    "port":22,
+    "user": "reveation",
+    "password": "$mffs$B",
+    "FTPFileDirectory":"/upload/FTPSchedularFiles",
+    "LocalPathToSaveFTPDownloadFiles":"./Files"
+  },
+  "BookingStatus":{
+    "Booked":128,
+    "Checked_In":129,
+    "Checked_Out":130
+  },
+  "RoomStatus":{
+    "Booked":160,
+    "Dirty":143
+  }
+}

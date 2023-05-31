@@ -1,0 +1,1329 @@
+/* Start :: Common CSS */
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: #f8f9fe;
+}
+
+input {
+  background-color: transparent;
+}
+
+button:focus {
+  outline: none;
+}
+
+.form-group {
+  width: 100%;
+  margin: 0;
+}
+
+.MuiDialog-paperWidthSm {
+  max-width: 600px;
+}
+
+.MuiDialogTitle-root,
+.MuiDialogContent-root,
+.MuiDialogActions-root {
+  padding: 15px 20px;
+}
+
+.MuiDialogTitle-root {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.MuiDialogTitle-root button {
+  padding: 5px;
+}
+
+.MuiDialogTitle-root h2 {
+  font-size: 22px;
+}
+
+.list-root {
+  padding: 0;
+}
+
+.MuiDialogActions-root {
+  padding-bottom: 15px;
+  padding-top: 0;
+}
+
+.form-group .MuiInput-root {
+  border: 1px solid #afafaf;
+  border-radius: 4px;
+  background-color: #ffffff;
+  margin-top: 0 !important;
+}
+
+.form-group .MuiInput-root input,
+.form-group .MuiInputBase-input {
+  padding: 10px 12px;
+}
+
+.form-group .MuiInput-underline:after {
+  display: none;
+}
+
+.form-group .MuiFormControl-root {
+  width: 100%;
+}
+
+.form-group .MuiInput-underline:before,
+.form-group .MuiInput-underline:after,
+.form-group .MuiInput-underline.Mui-error:after {
+  content: none;
+}
+
+/* End :: Common CSS */
+/* Start :: Highlighted Cards */
+.text-orange {
+  color: #ef8632;
+}
+
+.text-blue {
+  color: #009dff;
+}
+
+.text-red {
+  color: #ed3237;
+}
+
+.highlighted-card img {
+  max-width: 60px;
+}
+
+.highlighted-card-wrap .media-body {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.highlighted-card svg {
+  height: 30px;
+  width: 30px;
+}
+
+.dash-todolist-wrap .badge-success {
+  color: #fff;
+  background-color: #28a745;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.dash-todolist-wrap .badge-fail {
+  color: #fff;
+  background-color: #ed3237;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.highlighted-card-wrap:nth-child(3n+1) svg,
+.highlighted-card-wrap:nth-child(3n+1) svg path {
+  fill: #ed3237;
+  ;
+}
+
+.highlighted-card-wrap:nth-child(3n+2) svg,
+.highlighted-card-wrap:nth-child(3n+2) svg path {
+  fill: #009dff;
+}
+
+.highlighted-card-wrap:nth-child(3n+3) svg,
+.highlighted-card-wrap:nth-child(3n+3) svg path {
+  fill: #ef8632;
+}
+
+.highlighted-card-wrap .card,
+.highlighted-card-wrap .media {
+  height: 100%;
+}
+
+.highlighted-card-wrap {
+
+  flex-basis: 20%;
+  cursor: pointer;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+
+@media all and (max-width:991px) {
+  .highlighted-card-wrap {
+    max-width: 33.33%;
+    flex-basis: 33.33%;
+  }
+}
+
+@media all and (max-width:767px) {
+  .highlighted-card-wrap {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+}
+
+.dash-todolist {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.dash-todolist li a {
+  padding: 3px 0;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.dash-todolist-wrap .card {
+  height: 100%;
+}
+
+@media all and (max-width: 1010px) {
+  .highlighted-card-subtitle {
+    font-size: 14px;
+  }
+
+  .highlighted-card img {
+    max-width: 50px;
+  }
+}
+
+@media all and (max-width: 915px) {
+  .card.highlighted-card {
+    padding: 10px;
+  }
+
+  .highlighted-card-subtitle {
+    font-size: 12px;
+  }
+
+  .highlighted-card img {
+    max-width: 45px;
+  }
+}
+
+@media all and (max-width: 777px) {
+  .highlighted-card-subtitle {
+    font-size: 11px;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .highlighted-card-subtitle {
+    font-size: 14px;
+  }
+
+  .card.highlighted-card {
+    padding: 15px;
+  }
+}
+
+@media all and (min-width: 578px) and (max-width: 625px) {
+  .highlighted-card-subtitle {
+    font-size: 12px;
+  }
+}
+
+/* End :: Highlighted Cards */
+/* Start :: Card Specific CSS */
+.selection-card .form-group .MuiInput-root input,
+.selection-card .form-group .MuiInputBase-input {
+  padding: 7px 10px;
+}
+
+.selection-card .button:not(:disabled) {
+  padding: 4px 24px;
+}
+
+/* End :: Card Specific CSS */
+
+/* Start :: Coloring */
+.MuiPickersToolbar-toolbar,
+.MuiPickersDay-daySelected,
+.MuiAppBar-colorPrimary,
+.MuiPickerDTTabs-tabs,
+.MuiPickersClock-pin,
+.MuiPickersClockPointer-pointer,
+.MuiPickersClockPointer-noPoint {
+  background-color: #ed3237;
+}
+
+.MuiPickersDay-daySelected:hover,
+.MuiTabs-indicator {
+  background-color: #c11015;
+}
+
+.MuiFocused,
+#component-error-text,
+.MuiCheckbox-colorSecondary.Mui-checked {
+  color: #ed3237;
+}
+
+.MuiInput-underline:after {
+  border-bottom-color: #222222;
+}
+
+.MuiPickersClockPointer-thumb {
+  border-color: #ed3237;
+}
+
+/* End :: Coloring */
+
+/* Start :: Switch */
+.MuiSwitch-track {
+  background-color: #aaaaaa;
+}
+
+.MuiSwitch-colorPrimary.Mui-checked+.MuiSwitch-track {
+  background-color: #c11015;
+}
+
+/* End :: Switch */
+
+/* Start :: Select and Text Control */
+.select-label,
+.MuiFormLabel-root,
+.MuiFormLabel-root.Mui-focused {
+  font-size: 14px;
+  color: #222222;
+  transform: none;
+  position: relative;
+}
+
+.text-input,
+.select-input {
+  width: 100%;
+}
+
+/* End :: Select and Text Control */
+
+/* Start :: Button */
+.button:not(:disabled) {
+  border-radius: 6px;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  padding: 8px 24px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.button:disabled {
+  padding: 8px 24px;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.selection-card .button:disabled {
+  padding: 4px 24px;
+}
+
+.button-primary {
+  background-color: #ed3237;
+  color: #ffffff;
+}
+
+.button-primary:hover {
+  background-color: #c11015;
+}
+
+.button-black {
+  background-color: #3a3a3a;
+  color: #ffffff;
+}
+
+.button-outline-black {
+  color: #3a3a3a;
+  background-color: transparent;
+  padding: 6px 22px !important;
+  border: 2px solid #3a3a3a !important;
+}
+
+.button-black:hover,
+.button-outline-black:hover {
+  background-color: #000000;
+  color: #fff;
+  border-color: #000000 !important;
+}
+
+.selection-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  white-space: nowrap;
+}
+
+@media all and (min-width: 1280px) and (max-width: 1330px) {
+  .add-employee-button {
+    padding: 4px 14px !important;
+  }
+}
+
+@media all and (max-width: 599px) {
+  .button-aligned-with-select {
+    margin: 0;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .selection-card-actions {
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+}
+
+@media all and (min-width: 960px) {
+  .selection-card-two-columns .selection-card-actions {
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+}
+
+/* End :: Button */
+
+/* Start :: Card View */
+.card {
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 20px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04);
+  border: none;
+}
+
+@media all and (max-width: 1599px) {
+  .card {
+    padding: 15px;
+  }
+}
+
+/* End :: Card View */
+
+/* Start :: Table */
+table {
+  box-shadow: none;
+}
+
+.table-wrapper [class*="Component-horizontalScrollContainer-"] {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+.table-wrapper .MuiTablePagination-root {
+  border: none;
+}
+
+.table-wrapper .MuiToolbar-gutters {
+  padding: 0;
+}
+
+.editable-table-wrapper td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* tbody td.MuiTableCell-root .MuiIconButton-root, */
+tbody td.MuiTableCell-alignLeft {
+  /* padding-top: 6px;
+  padding-bottom: 6px; */
+  padding: 6px !important;
+  height: 30px !important;
+  white-space: wrap !important;
+  border: 0.5px solid #659F1C !important;
+  font-size: 12pt !important;
+}
+
+thead th.MuiTableCell-alignLeft {
+  padding: 10px 6px !important;
+  background-color: #F5F5F5 !important;
+  color: #222222 !important;
+  white-space: nowrap !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  height: 50px !important;
+  border: 1px solid #659F1C !important;
+  font-size: 12pt !important;
+}
+
+.MuiTableCell-alignLeft {
+  width: auto !important;
+}
+
+td.MuiTableCell-root [class*="TextInput-inputInline-"] {
+  border-radius: 4px;
+}
+
+td.MuiTableCell-root .form-group label {
+  display: none;
+}
+
+td.MuiTableCell-root .form-group .MuiInputBase-input {
+  padding: 6px 6px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+td.MuiTableCell-root .form-group .MuiFormLabel-root {
+  font-size: 13px;
+}
+
+.table-edit-controls .MuiIconButton-root {
+  padding: 6px;
+}
+
+.table-edit-controls {
+  white-space: nowrap;
+}
+
+.table-wrapper>.MuiPaper-root>.MuiToolbar-root>[class*="MTableToolbar-title-"] {
+  align-self: flex-start;
+}
+
+.table-wrapper .MuiToolbar-regular {
+  min-height: 55px;
+}
+
+.table-wrapper th.MuiTableCell-root {
+  padding: 10px 6px;
+  background-color: rgb(245, 245, 245);
+}
+
+.table-wrapper.table-smaller th.MuiTableCell-root,
+.table-wrapper.table-smaller td.MuiTableCell-alignLeft {
+  padding: 10px 6px;
+}
+
+@media all and (max-width: 600px) {
+  .table-wrapper .MuiToolbar-regular {
+    flex-direction: column;
+  }
+
+  .table-wrapper .MuiToolbar-regular [class*="MTableToolbar-title-"] {
+    max-width: 100%;
+  }
+}
+
+/* End :: Table */
+
+/* Start :: Snackbar */
+.custom-snackbar {
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 600px) {
+  .custom-snackbar-wrap {
+    top: 15px;
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .custom-snackbar-wrap {
+    padding-left: 250px;
+  }
+}
+
+/* End :: Snackbar */
+
+/* Start :: DatePicker */
+.datepicker-input {
+  position: relative;
+}
+
+.datepicker-input .MuiIconButton-root {
+  margin: 0px 6px;
+  padding: 1px;
+  /* margin-right: 1px; */
+}
+
+.datepicker-input .MuiInputAdornment-positionStart {
+  margin-right: 0;
+}
+
+.datepicker-input.form-group .MuiInput-root input,
+.datepicker-input.form-group .MuiInputBase-input {
+  padding-left: 2px;
+}
+
+.MuiPickersBasePicker-container .MuiTypography-h4,
+.MuiPickersBasePicker-container .MuiTypography-h3 {
+  font-size: 1.2rem;
+}
+
+.MuiPickersBasePicker-container .MuiPickersToolbar-toolbar {
+  height: 75px;
+}
+
+.MuiPickersBasePicker-container .MuiPickersCalendarHeader-dayLabel {
+  width: 30px;
+}
+
+.MuiPickersBasePicker-container .MuiPickersDay-day {
+  width: 30px;
+  height: 30px;
+}
+
+.MuiPickersBasePicker-container .MuiPickersBasePicker-pickerView {
+  min-width: 260px;
+}
+
+.MuiPickersBasePicker-container .MuiPickersCalendar-transitionContainer {
+  min-height: 186px;
+}
+
+.MuiPickersBasePicker-container .MuiPickersClock-clock {
+  transform: scale(0.9);
+}
+
+.MuiPickersBasePicker-container .MuiTab-root {
+  min-width: 130px;
+}
+
+.MuiPickersBasePicker-containerLandscape {
+  flex-direction: column;
+}
+
+.MuiPickersToolbar-toolbarLandscape {
+  max-width: 100%;
+}
+
+.MuiPickersCalendarHeader-switchHeader button {
+  padding: 5px;
+}
+
+.MuiPickersBasePicker-pickerView {
+  justify-content: flex-start;
+  min-height: 265px;
+}
+
+.MuiInputBase-input.Mui-disabled[name="datepicker"] {
+  color: black !important;
+}
+
+/* End :: DatePicker */
+
+/* Start :: Custom Scrollbar */
+.MuiDrawer-paper {
+  float: left;
+}
+
+div:hover::-webkit-scrollbar-track {
+  opacity: 0;
+}
+
+div::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #eeeeee;
+}
+
+div::-webkit-scrollbar {
+  width: 8px;
+  background-color: #eeeeee;
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: #999999;
+  border-radius: 150px;
+}
+
+/* ::-webkit-scrollbar-track {
+  background-color: #eeeeee;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #eeeeee;
+} */
+
+body *::-webkit-scrollbar-thumb {
+  background-color: #999999;
+  border-radius: 150px;
+  border: none !important;
+}
+
+/* End :: Custom Scrollbar */
+
+/* Added By Khushbu */
+.fixed-table-header {
+  position: fixed;
+  top: 0;
+  width: 1072px;
+  display: table;
+  z-index: 10;
+}
+
+.placeholder {
+  opacity: 0.5;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.grey-table-header {
+  background-color: #ededed;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.MuiGrid-grid-lg-true {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/** Niraj Gohel : 9 Apr 2020 **/
+
+/* Start :: Dashboard Birthday Section */
+.birthday-container {
+  max-height: 290px;
+  overflow: auto;
+  padding-right: 15px;
+}
+
+.birthday-container:hover::-webkit-scrollbar-track {
+  opacity: 0;
+}
+
+.birthday-container::-webkit-scrollbar-track {
+  background-color: #eeeeee;
+}
+
+.birthday-container::-webkit-scrollbar {
+  width: 4px;
+  background-color: #eeeeee;
+}
+
+.birthday-container::-webkit-scrollbar-thumb {
+  background-color: #999999;
+  border-radius: 150px;
+}
+
+.birthday-wrapper {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  border-bottom: 1px solid #f5f6f9;
+}
+
+.birthday-wrapper:last-child {
+  border: none;
+  padding-bottom: 0;
+}
+
+.birthday-image-wrapper {
+  max-width: 42px;
+  margin-right: 10px;
+}
+
+.birthday-image-wrapper img {
+  border-radius: 100%;
+}
+
+.birthday-icon {
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+}
+
+.birthday-date {
+  font-size: 12px;
+  color: rgba(34, 34, 34, 0.7);
+}
+
+/* End :: Dashboard Birthday Section */
+
+/* Start :: Report Table */
+.report-table-wrapper thead th.MuiTableCell-root {
+  text-align: center;
+}
+
+.report-table-wrapper td.MuiTableCell-root,
+.report-table-wrapper th.MuiTableCell-root {
+  vertical-align: top;
+  border: 1px solid #cccccc;
+  position: relative;
+}
+
+.redBG:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background-color: #ffe9e9;
+}
+
+.redBG td,
+.redBG th {
+  position: relative;
+  z-index: 11;
+}
+
+.chip {
+  border-radius: 120px;
+  font-weight: bold;
+  background-color: #f6f9f9;
+  padding: 6px 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.holiday-chip {
+  background-color: #c9eeeb;
+  color: #219087;
+}
+
+.weekoff-chip {
+  background-color: #edf2ff;
+  color: #6e7b9e;
+}
+
+/* End :: Report Table */
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.notification-item {
+  padding-bottom: 6px;
+  border-bottom: 1px solid #eeeeee;
+  max-width: 200px;
+}
+
+td ul {
+  padding-left: 15px !important;
+  margin-bottom: 0;
+}
+
+.lds-default {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-default div {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #ed3237;
+  border-radius: 50%;
+  animation: lds-default 1.2s linear infinite;
+}
+
+.lds-default div:nth-child(1) {
+  animation-delay: 0s;
+  top: 37px;
+  left: 66px;
+}
+
+.lds-default div:nth-child(2) {
+  animation-delay: -0.1s;
+  top: 22px;
+  left: 62px;
+}
+
+.lds-default div:nth-child(3) {
+  animation-delay: -0.2s;
+  top: 11px;
+  left: 52px;
+}
+
+.lds-default div:nth-child(4) {
+  animation-delay: -0.3s;
+  top: 7px;
+  left: 37px;
+}
+
+.lds-default div:nth-child(5) {
+  animation-delay: -0.4s;
+  top: 11px;
+  left: 22px;
+}
+
+.lds-default div:nth-child(6) {
+  animation-delay: -0.5s;
+  top: 22px;
+  left: 11px;
+}
+
+.lds-default div:nth-child(7) {
+  animation-delay: -0.6s;
+  top: 37px;
+  left: 7px;
+}
+
+.lds-default div:nth-child(8) {
+  animation-delay: -0.7s;
+  top: 52px;
+  left: 11px;
+}
+
+.lds-default div:nth-child(9) {
+  animation-delay: -0.8s;
+  top: 62px;
+  left: 22px;
+}
+
+.lds-default div:nth-child(10) {
+  animation-delay: -0.9s;
+  top: 66px;
+  left: 37px;
+}
+
+.lds-default div:nth-child(11) {
+  animation-delay: -1s;
+  top: 62px;
+  left: 52px;
+}
+
+.lds-default div:nth-child(12) {
+  animation-delay: -1.1s;
+  top: 52px;
+  left: 62px;
+}
+
+@keyframes lds-default {
+
+  0%,
+  20%,
+  80%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+/** Manager vs Team Report **/
+.person-a {
+  background-color: #dbdcdc !important;
+}
+
+.person-b {
+  background-color: #e3e6e9 !important;
+}
+
+/** Extra small tables **/
+.table-size-xs tbody th,
+.table-size-xs thead th,
+.table-size-xs tbody td {
+  padding: 0px 3px !important;
+  border: 1px solid #e0e0e0;
+  line-height: 1.2;
+}
+
+.table-size-xs .table-edit-controls button {
+  padding: 2px;
+}
+
+.table-size-xs .table-edit-controls img {
+  width: 16px;
+  margin-left: 2px;
+}
+
+.table-size-xs .checkbox-wrap>.MuiButtonBase-root {
+  padding: 0;
+}
+
+.table-size-xs.table-wrapper .MuiToolbar-regular {
+  min-height: 0;
+}
+
+.table-input-size-xs td .MuiAutocomplete-root .MuiInput-root input,
+.table-input-size-xs td .form-group .MuiInputBase-input {
+  padding: 2px !important;
+}
+
+.invoice-table-wrapper .MuiPaper-root {
+  background: transparent;
+}
+
+.invoice-table-wrapper .MuiPaper-root .MuiToolbar-root {
+  padding-bottom: 40px;
+}
+
+/* .invoice-table-wrapper .Component-horizontalScrollContainer-63 {
+  max-height: 350px;
+  overflow-y: auto;
+} */
+
+/** Pagination CSS Overriding */
+.MuiTablePagination-root .MuiTablePagination-input,
+.MuiTablePagination-root .MuiTypography-caption {
+  font-size: 0.85rem;
+}
+
+.MuiTablePagination-root .MuiButtonBase-root {
+  padding: 6px;
+}
+
+/* GPS Track DCR Specific CSS */
+.dcr-specific table thead th {
+  background-color: #888 !important;
+  color: #fff;
+}
+
+/* Autocomplete Component CSS */
+.form-group .MuiAutocomplete-root .MuiInput-root {
+  border: none;
+}
+
+.form-group .MuiAutocomplete-root .MuiInput-root input {
+  padding-left: 6px !important;
+}
+
+.form-group .MuiAutocomplete-root .MuiFormControl-root {
+  margin: 0px;
+}
+
+/* Invoice Page CSS */
+.invoice-table-wrapper .MuiTableCell-alignLeft {
+  width: calc((100% - 0px) / 7) !important;
+}
+
+.invoice-table-wrapper .MuiTableCell-alignLeft:first-child {
+  width: 100px !important;
+}
+
+.invoice-table-wrapper .MuiTableCell-alignLeft:nth-child(2) {
+  width: calc((100% - 0px) / 3) !important;
+}
+
+.invoice-number-group .MuiInputBase-formControl {
+  border-radius: 4px 0px 0px 4px;
+}
+
+.invoice-number-group .invoice-check-duplicate-btn {
+  white-space: nowrap;
+  margin-top: 21px;
+  height: 33px;
+  border: none !important;
+  background-color: #ed3237;
+  color: #fff;
+  border-radius: 0px 4px 4px 0px;
+  font-size: 14px;
+}
+
+.input-absolute-icon {
+  position: absolute;
+  top: 27px;
+  right: 4px;
+  padding: 5px;
+}
+
+.input-absolute-icon svg {
+  width: 15px;
+}
+
+.clear-search-btn .input-absolute-icon {
+  top: 14px;
+}
+
+.MuiTooltip-tooltipPlacementBottom,
+.MuiTooltip-tooltipPlacementTop,
+.MuiTooltip-tooltipArrow {
+  background-color: #cfcaca;
+  margin: -4px 0;
+}
+
+/* my order */
+.myorder-table-wrapper .MuiTableCell-alignLeft {
+  width: calc((100% - 0px) / 7) !important;
+}
+
+.myorder-table-wrapper .MuiTableCell-alignLeft:nth-child(2) {
+  width: calc((100% - 0px) / 3) !important;
+}
+
+/* end my order */
+
+div[class^="MTableToolbar-title-*"],
+div[class*="MTableToolbar-title-"] {
+  width: 54%
+}
+
+/* div[class^="MTableToolbar-spacer-*"], div[class*="MTableToolbar-spacer-"] {
+  display:none
+} */
+
+/* Patient-Name-List Simple List */
+
+.box-style {
+  /* background-color: #e0e0e0; */
+
+  border: 2px solid gray;
+  min-height: 400px;
+  width: 200px;
+  overflow: auto;
+  max-height: 140px;
+}
+
+.box-guest {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  margin-right: 3%;
+}
+
+.box-guest button {
+  width: 100%;
+}
+
+/* .box-guest .total-guest{
+} */
+.box-guest label {
+  display: none;
+}
+
+.box-style .button-not-active .MuiButton-contained {
+  background-color: white !important;
+  width: 100%;
+  border: 1px gray;
+  text-transform: capitalize;
+}
+
+.box-style .button-active .MuiButton-contained {
+  background-color: beige !important;
+  width: 100%;
+  border: 1px gray;
+  text-transform: capitalize;
+}
+
+/* start dashboard accordion and leave summary accordion css */
+.accordion-box .MuiAccordion-rounded:last-child {
+  border-radius: 0px;
+}
+
+.accordion-box .MuiAccordion-rounded:first-child {
+  border-radius: 0px;
+}
+
+.accordion-box .MuiAccordionSummary-root {
+  background-color: #969b4a;
+}
+
+.accordion-box .MuiAccordionDetails-root {
+  padding: 4px;
+}
+
+.accordion-box .summary-leave-page {
+  display: block;
+}
+
+.accordion-box .summary-leave-page .highlighted-card {
+  margin-bottom: 0px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.accordion-box .summary-leave-page .highlighted-card h4 {
+  font-size: 18px;
+  color: #000000;
+}
+
+.accordion-box .summary-leave-page .highlighted-card .media {
+  background-color: #F5F5F5;
+}
+
+.accordion-box .main-title {
+  font-size: 20px;
+}
+
+.accordion-box table td {
+  text-align: center;
+}
+
+.accordion-box table th {
+  text-align: center;
+  font-weight: 600;
+}
+
+.dasboard-accordion-box table td {
+  vertical-align: inherit;
+  text-align: center;
+}
+
+.dasboard-accordion-box table th {
+  vertical-align: middle;
+}
+
+.dasboard-accordion-box .main-title {
+  font-size: 16px;
+}
+
+.dasboard-accordion-box .MuiAccordionSummary-expandIcon svg path {
+  fill: #ffffff
+}
+
+.accordion-box .MuiAccordionSummary-expandIcon svg path {
+  fill: #ffffff;
+}
+
+/* end dashboard accordion and leave summary accordion css */
+
+.box-style .MuiFormLabel-root {
+  display: none;
+}
+
+.print-button-div {
+  padding-left: 50px;
+}
+
+.print-box {
+  pointer-events: none;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+}
+
+.print-box .MuiInputBase-formControl {
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid #AFAFAF;
+}
+
+.print-box .comment-field .MuiInputBase-formControl {
+  border: 1px solid #AFAFAF;
+  border-radius: 4px;
+}
+
+.print-box .label {
+  font-size: 18px;
+  color: #222222;
+  margin-bottom: 0px;
+}
+
+.print-box label {
+  display: none;
+}
+
+.print-box .MuiListItem-gutters {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.print-box .MuiListItemText-primary {
+  font-size: 18px;
+}
+
+.treatment-template-table table {
+  max-height: 525px;
+  display: block;
+}
+
+.treatment-template-table table .MuiTableCell-alignLeft {
+  width: 50% !important;
+}
+
+.table-size-xs tbody th,
+.table-size-xs thead th,
+.table-size-xs tbody td {
+  white-space: unset !important;
+  max-width: 500px;
+}
+
+.input-disabled .form-group .MuiInputBase-root svg {
+  display: none;
+}
+
+.treatment-mastter-table .MuiPaper-elevation2 {
+  box-shadow: none;
+}
+
+.current-leave-summary {
+  padding: 10px 15px;
+}
+
+.current-leave-summary p {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+
+.occupancy {
+  max-width: 100px;
+  width: 70px;
+  margin-left: 20px;
+  align-items: center;
+  text-align: center;
+  font-size: small;
+  /* margin-left: 10px; */
+}
+
+.react-calendar {
+  width: 100% !important;
+}
+
+.react-calendar__tile {
+  border: 1px solid black !important;
+}
+
+.weekoffday {
+  /* background: red;  */
+  display: flex;
+  width: 100%;
+}
+
+.weeklyoff {
+  background: #0808052e !important;
+}
+
+.holiday-div {
+  background-color: #e45858;
+  color: #ffffff;
+}
+
+.react-calendar__tile--now {
+  background-color: #e4efb0 !important;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #d65050 !important;
+}
+
+/* .react-calendar__navigation{
+  border-bottom: 1px solid black;
+} */
+
+.box-1 {
+  width: 80%;
+}
+
+.box-1 .MuiTabs-flexContainer {
+  width: 100%;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 992px) {
+  .tab-root .MuiTab-root {
+    min-width: 125px;
+  }
+}
+
+.days {
+  justify-content: center;
+  text-align: center;
+}
+
+.roomName {
+  display: -webkit-inline-box;
+}

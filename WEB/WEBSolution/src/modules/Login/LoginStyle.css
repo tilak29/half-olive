@@ -1,0 +1,115 @@
+.mainDiv {
+  padding: 0px;
+  margin: 0px;
+}
+
+.imgContainer {
+  background-color: #eef6ff;
+  position: relative;
+  overflow-x: hidden;
+}
+.fullCircle {
+  margin-left: -90px;
+  margin-top: -90px;
+  left: 0;
+  position: absolute;
+}
+.groupImage {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.halfCircleImage {
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  margin-right: 62px;
+}
+.loginContainer {
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.logoContainer {
+  /* display: block; */
+  text-align: center;
+  width: 60%;
+}
+.formTitle {
+  margin: 5%;
+  margin-bottom: 17%;
+  font-size: 16px;
+  font-weight: 500;
+}
+.loginBtn {
+  width: 50%;
+  background-color: #ed3237;
+  text-transform: capitalize;
+  color: white;
+  font-weight: 600px;
+  border-radius: 25px;
+  border: 0;
+  outline: none;
+  height: 40px;
+}
+.loginBtn:active,
+.loginBtn:focus {
+  outline-style: none;
+}
+.signUpDiv {
+  font-weight: 500;
+  margin-top: 10%;
+}
+.linkStyle {
+  font-weight: 500;
+  color: #d41c21;
+  text-decoration: none;
+}
+.linkStyle:hover {
+  text-decoration: none;
+  color: #d41c21;
+}
+.linkStyle:active {
+  text-decoration: underline;
+}
+.logoImage {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.textInputMainDiv {
+  margin-bottom: 2%;
+}
+.textInputContainer {
+  text-align: center;
+  padding: 1%;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 1px solid lightgray;
+}
+.inputFieldIcon {
+  /* display: inline; */
+  margin-bottom: 0.5%;
+}
+
+.inputErrorMsg {
+  color: #ed3237;
+  text-align: start;
+  font-size: 9pt;
+  padding-left: 1%;
+  padding-bottom: 1%;
+}
+.textInputInnerContainer {
+  /* display: inline; */
+  margin-left: 4%;
+  width: -webkit-fill-available;
+}
+.inputControl {
+  border: 0;
+  height: 100%;
+  outline: none;
+  width: -webkit-fill-available;
+}

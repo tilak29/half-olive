@@ -1,0 +1,129 @@
+1] RadioGroup
+   1. isOptionAlignRow (bool) 
+   2. label (string)
+   3. labelPlacement (string) ["end" || "start" || "top" || "bottom" ]
+   4. color (string) - color of RadioGroup
+   5. helperText (string)
+   6. defaultValue (string) 
+   7. onChange (function)
+   8. options (array of object)  :
+    [
+        {
+            label: "Male",
+            value: "male",
+            disabled: true (optional)
+        }
+    ]
+
+2] Dialog
+
+    1. title (string)      - optional
+    2. titleAlign (string) - optional
+    3. actions (array of objects) :
+        [
+            {
+                label: "ok", 
+                onClick: () => { alert("OK");}
+            }
+        ];
+    4. isOpen (bool)
+    5. fullScreen (bool)
+    6. onClose (funtion)
+    7. maxWidth (string)   "xs"|| "sm" || "md" || "lg" || "xl"
+    8. content (string)
+
+3] Switch 
+    1. value (bool)
+    2. color (string)
+    3. disabled (bool)
+    4. onChange (function)
+    5. size (string) [ "medium" || "small" ]
+    6. labelPlacement (string) ["top" || "bottom" || "left" || "right"]
+    7. label
+
+4] Select 
+    1. id
+    2. label (string)
+    3. onChange (function)
+    4. data (array of objects):
+    [
+        {
+            label: "Option 1",
+            value: "option1"
+        }
+    ]
+    5. value 
+
+5] Button 
+    1. variant (string) ["contained" || "outlined"]
+    2. size (string) [ "small" || "medium" || "large"]
+    3. disabled (bool) 
+    4. onClick (function)
+    5. textColor (string or colorCode(hax))
+    6. label (string)
+    7. textTransform (string) ["capitalize" || "uppercase" || "lowercase"]
+    8. borderColor (string or colorCode(hax))
+    9. backgroundColor (string or colorCode(hax))
+    10. href (link to navigate on Click)
+
+6] Checkbox
+    1. color (string or color code) - color of Checkbox
+    2. isOptionAlignRow (bool) - option alignment
+    3. labelPlacement (string) - ["top" || "bottom" || "left" || "right"]
+    4. options :
+    [
+        {
+        label: "Option 1",
+        value: "option1"
+        }
+    ]
+    5. defaultValue - default value to be checked in checkbox list
+    6. onChecked (function) 
+
+7] Date picker
+    1. id 
+    2. defaultValue (date Object)
+    3. variant (string) ["static" || "dialog" ||"inline"]
+    4. format (date format) [default- " dd/MM/yyyy " ]
+    5. margin (string)   ["none" < "dense" <"normal"]
+    6. label (string)
+    7. onChange (function)
+    8. minDate (date object)    - Min selectable date
+    9. minDateMessage (string)  - Error message, shown if date is less then minimal date
+    10. maxDate (dat eobject)   - max selectable date
+    11. maxDateMessage (string) - Error message, shown if date is more then maximal date
+    12. disableFuture (bool)    - disable future date || NOTE: having high priority than minDate or maxDate
+    13. disablePast (bool)      - disable past date || NOTE: having high priority than minDate or maxDate
+
+8] Date time picker
+    1. lable (string)
+    2. variant (string)  ["static" || "dialog" ||"inline"]
+    3. value (date object)
+    4. margin (string)   ["none" < "dense" <"normal"]
+    5.  minDate (date object)    - Min selectable date
+    6. minDateMessage (string)  - Error message, shown if date is less then minimal date
+    7. maxDate (dat eobject)   - max selectable date
+    8. maxDateMessage (string) - Error message, shown if date is more then maximal date
+    9. onChange(function)
+    10. disableFuture (bool)    - disable future date || NOTE: having high priority than minDate or maxDate
+    11. disablePast (bool)      - disable past date || NOTE: having high priority than minDate or maxDate
+
+9] Text field
+    1. id 
+    2. value
+    3. error (bool) 
+    4. required (bool)
+    5. isMulitline (bool)
+    6. rowsMaxFromProps (int)
+    7. options 
+    8. fullWidth (bool)
+    9. numeric (bool)
+    10. defvalue 
+    11. onChange (function)
+    12. isAutoFocus (bool)
+    13. helperText (string)
+    14. label (string)
+    15. placeholder (string)
+
+10] File upload
+    

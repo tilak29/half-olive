@@ -1,0 +1,1271 @@
+{
+  "publicAPIDataTypeJSON": {
+    "login": {
+      "userName": "required",
+      "otp": "required|digits:4"
+    },
+    "isAuthorizedUser": {
+      "userName": "required"
+    },
+    "userRegistrationAdd": {
+      "name": "required",
+      "address": "required",
+      "state": "required",
+      "city": "required",
+      "area": "required",
+      "mobileNumber": "required|numeric",
+      "registeredAs": "required|numeric"
+    },
+    "userRegistrationGet": {
+      "loggedInEmployeeId": "required|numeric"
+    },
+    "advertiseGet": {
+      "loggedInEmployeeId": "required|numeric"
+    },
+    "viewCSProfileGet": {
+      "loggedInEmployeeId": "required|numeric"
+    },
+    "redeemRequestGetRewardStatus": {
+      "loggedInEmployeeId": "required|numeric"
+    },
+    "redeemRequestGetData": {
+      "loggedInEmployeeId": "required|numeric"
+    },
+    "redeemRequestAdd": {
+      "schemeId": "required|numeric",
+      "rewardId": "required|numeric",
+      "rewardName": "required",
+      "rewardImage": "required",
+      "points": "required|numeric",
+      "status": "required|numeric",
+      "loggedInEmployeeId": "required|numeric"
+    },
+    "redeemRequestUpdate": {
+      "redeemRequestId": "required|numeric",
+      "status": "required|numeric",
+      "updatedDate": "datetime",
+      "loggedInEmployeeId": "required|numeric"
+    },
+    "firebaseTokenCS": {
+      "firebaseToken": "required",
+      "loggedInAppIndication": "required|numeric",
+      "loggedInEmployeeId": "required|numeric"
+    },
+    "monthlyStatusGet": {
+      "loggedInAppIndication": "required|numeric",
+      "loggedInEmployeeId": "required|numeric"
+    }
+  },
+  "login": {
+    "userName": "required",
+    "password": "required|notContains:/|maxLength:11"
+  },
+  "loginMobile": {
+    "userName": "required",
+    "password": "required|notContains:/|maxLength:11",
+    "deviceId": "required"
+  },
+  "changePassword": {
+    "oldPassword": "required|notContains:/|maxLength:11",
+    "newPassword": "required|same:confirmPassword",
+    "confirmPassword": "required",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "companyMaster": {
+    "companyName": "required|maxLength:101|regex[a-z]",
+    "phoneNumber": "required|maxLength:11",
+    "webserviceURL": "maxLength:201",
+    "activeDate": "dateFormat:DD-MM-YYYY",
+    "companyImage": "maxLength:301",
+    "reportHeaderImage": "maxLength:301",
+    "reportFooterImage": "maxLength:301",
+    "createdBy": "maxLength:301|numeric"
+  },
+  "forgotPassword": {
+    "userName": "required",
+    "code": "required|maxLength:201"
+  },
+  "updateTable": {
+    "updatedDate": "datetime",
+    "updatedBy": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "deleteTable": {
+    "updatedDate": "datetime",
+    "deletedBy": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "sendMail": {
+    "from": "required",
+    "to": "required"
+  },
+  "refreshToken": {
+    "loggedInDesignationId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "logOut": {
+    "userName": "required"
+  },
+  "fileMimeType": {
+    "base64String": "required"
+  },
+  "firebaseNotification": {
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "firebaseGetData": {
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "holidayMasterAdd": {
+    "holidayDate": "required",
+    "holidayName": "required|maxLength:50"
+  },
+  "holidayMastergetData": {
+    "year": "required"
+  },
+  "holidayMasterUpdate": {
+    "holidayName": "maxLength:51",
+    "holidayDate": "required",
+    "loggedInUserId": "required|numeric",
+    "holidayId": "required|numeric"
+  },
+  "holidayMasterDelete": {
+    "loggedInUserId": "required|numeric",
+    "holidayId": "required|numeric"
+  },
+  "cityMasterGetData": {
+    "stateId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "stateMasterGetData": {
+    "countryId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "stateMasterAdd": {
+    "countryId": "required|numeric",
+    "stateName": "required|maxLength:81",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "stateMasterUpdate": {
+    "countryId": "required|numeric",
+    "stateName": "required|maxLength:81",
+    "updatedDate": "datetime",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "pointsUpdate": {
+    "chemistId": "required|numeric",
+    "balancePoints": "numeric",
+    "boxPoints": "numeric",
+    "remarks":"required",
+    "flag":"required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "areaMasterGetData": {
+    "cityId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "areaMasterAdd": {
+    "cityId": "required|numeric",
+    "areaName": "required|maxLength:251",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "areaMasterUpdate": {
+    "areaId": "required|numeric",
+    "areaName": "required|maxLength:81",
+    "updatedDate": "datetime",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "areaMasterDelete": {
+    "updatedDate": "datetime",
+    "loggedInEmployeeId": "required|numeric",
+    "areaId": "required|numeric"
+  },
+  "cityMasterAdd": {
+    "stateId": "required|numeric",
+    "cityName": "required|maxLength:251",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "cityMasterUpdate": {
+    "cityId": "required|numeric",
+    "cityName": "required|maxLength:81",
+    "stateId": "required|numeric",
+    "updatedDate": "datetime",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "cityMasterDelete": {
+    "updatedDate": "datetime",
+    "loggedInEmployeeId": "required|numeric",
+    "cityId": "required|numeric"
+  },
+  "divisionMasterAdd": {
+    "divisionName": "required|maxLength:251",
+    "formedDate": "required|datetime",
+    "userName": "required"
+  },
+  "divisionMasterUpdate": {
+    "divisionId": "required|numeric",
+    "divisionName": "required|maxLength:251",
+    "formedDate": "required|datetime",
+    "updatedDate": "datetime",
+    "userName": "required"
+  },
+  "locationMasterAdd": {
+    "locationName": "required|maxLength:251"
+  },
+  "locationMasterUpdate": {
+    "locationId": "required|numeric",
+    "locationName": "required|maxLength:251",
+    "updatedDate": "datetime",
+    "userName": "required"
+  },
+  "locationMasterDelete": {
+    "locationId": "required|numeric"
+  },
+  "treatmentSectionAdd": {
+    "MorningTherapy": "required|maxLength:251",
+    "EveningTherapy": "required|maxLength:251"
+  },
+  "designationMasterAdd": {
+    "designationCode": "required|maxLength:51",
+    "description": "required|maxLength:101",
+    "userName": "required"
+  },
+  "designationMasterUpdate": {
+    "designationId": "required|numeric",
+    "designationCode": "required|maxLength:51",
+    "description": "required|maxLength:101",
+    "updatedDate": "datetime",
+    "userName": "required"
+  },
+  "getStaticDataLookup": {
+    "code": "required|maxLength:51",
+    "userName": "required"
+  },
+  "getAreaDataLookup": {
+    "cityId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "getRoutesByEmployeeIdLookup": {
+    "loggedInEmployeeId": "required|numeric",
+    "employeeId": "required|numeric"
+  },
+  "employeeMasterGetData": {
+    "userName": "required"
+  },
+  "employeeMasterAdd": {
+    "firstName": "required|maxLength:151",
+    "lastName": "required|maxLength:151",
+    "fatherName": "required|maxLength:151",
+    "dob": "required|dateFormat:YYYY-MM-DD",
+    "doa": "dateFormat:YYYY-MM-DD",
+    "stateId": "required|numeric",
+    "cityId": "required|numeric",
+    "designationId": "required|numeric",
+    "mobileNumber": "required|numeric",
+    "managerId": "required|numeric",
+    "status": "required|numeric",
+    "dor": "requiredIf:status,10|requiredWith:dol,fnFDate,resignationReason|numeric",
+    "resignationReason": "requiredIf:status,10|numeric|maxLength:501",
+    "doc": "dateFormat:YYYY-MM-DD",
+    "doj": "required|requiredWith:doc|dateFormat:YYYY-MM-DD",
+    "fnFDate": "dateFormat:YYYY-MM-DD",
+    "dol": "requiredWith:dor|dateFormat:YYYY-MM-DD",
+    "loggedInReferenceId": "required|numeric"
+  },
+  "employeeMasterUpdate": {
+    "firstName": "required|maxLength:151",
+    "lastName": "required|maxLength:151",
+    "fatherName": "required|maxLength:151",
+    "dob": "required|dateFormat:YYYY-MM-DD",
+    "doa": "dateFormat:YYYY-MM-DD",
+    "stateId": "required|numeric",
+    "cityId": "required|numeric",
+    "designationId": "required|numeric",
+    "mobileNumber": "required|numeric",
+    "managerId": "required|numeric",
+    "status": "required|numeric",
+    "dor": "requiredIf:status,10|requiredWith:dol,fnFDate,resignationReason|dateFormat:YYYY-MM-DD",
+    "resignationReason": "requiredIf:status,10|maxLength:501",
+    "doc": "dateFormat:YYYY-MM-DD",
+    "doj": "required|requiredWith:doc|dateFormat:YYYY-MM-DD",
+    "fnFDate": "dateFormat:YYYY-MM-DD",
+    "dol": "dateFormat:YYYY-MM-DD",
+    "loggedInReferenceId": "required|numeric"
+  },
+  "routeMasterGetData": {
+    "employeeId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "routeMasterAdd": {
+    "stateId": "required|numeric",
+    "cityId": "required|numeric",
+    "employeeId": "required|numeric",
+    "routeName": "required|maxLength:501",
+    "routeTypeId": "required|numeric",
+    "distanceFromHq": "required|numeric|maxLength:7",
+    "isActive": "required|numeric",
+    "tpVisitPerMonth": "numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "routeMasterUpdate": {
+    "routeId": "numeric",
+    "stateId": "required|numeric",
+    "cityId": "required|numeric",
+    "employeeId": "required|numeric",
+    "routeName": "required|maxLength:501",
+    "routeTypeId": "required|numeric",
+    "distanceFromHq": "required|numeric|maxLength:7",
+    "isActive": "required|numeric",
+    "tpVisitPerMonth": "numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "additionRouteAdd": {
+    "additionalRouteId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "chemistMasterGetData": {
+    "cityId": "requiredIf:isRouteChemist,false|numeric",
+    "stateId": "requiredIf:isRouteChemist,false|numeric",
+    "search": "requiredIf:isRouteChemist && chemistMasterCall,true",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "chemistGetDataMobile": {
+    "loggedInEmployeeId": "required|numeric",
+    "routeId": "required|numeric"
+  },
+  "chemistUpdateRoute": {
+    "loggedInEmployeeId": "required|numeric",
+    "routeId": "required|numeric",
+    "updatedDate": "datetime",
+    "chemistId": "required|numeric"
+  },
+  "chemistMasterAdd": {
+    "chemistName": "required|maxLength:201",
+    "stateId": "required|numeric",
+    "cityId": "required|numeric",
+    "areaId": "required|numeric",
+    "contactPerson": "required|maxLength:101",
+    "mobile": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "chemistMasterUpdate": {
+    "chemistId": "required|numeric",
+    "updatedDate": "datetime",
+    "chemistName": "required|maxLength:201",
+    "stateId": "required|numeric",
+    "cityId": "required|numeric",
+    "areaId": "required",
+    "contactPerson": "required|maxLength:101",
+    "mobile": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "itemMasterGetData": {
+    "divisionId": "numeric",
+    "isActive": "required|numeric",
+    "page": "numeric",
+    "pageSize": "numeric",
+    "orderBy": "maxLength:101",
+    "orderDirection": "maxLength:11",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "itemMasterAdd": {
+    "brand": "required|maxLength:301",
+    "categoryId": "required|numeric",
+    "pack": "required",
+    "divisionId": "required|numeric",
+    "boxSize": "required|numeric",
+    "mrp": "required|numeric",
+    "ptr": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "itemMasterUpdate": {
+    "updatedDate": "datetime",
+    "itemId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "deviceIdGetData": {
+    "stateId": "required|numeric",
+    "divisionId": "required|numeric"
+  },
+  "deviceIdInsert": {
+    "appVersion": "required|maxLength:101",
+    "deviceId": "required",
+    "fakeGPS": "required|numeric",
+    "mobileModal": "required|maxLength:201",
+    "mobileNumber": "required|numeric",
+    "osVersion": "required|maxLength:101"
+  },
+  "deviceIdUpdate": {
+    "changeDevice": "required",
+    "updatedDate": "datetime",
+    "deviceConfigId": "required|numeric"
+  },
+  "schemeMasterAdd": {
+    "name": "required|maxLength:101",
+    "code": "required|maxLength:11",
+    "uom": "required",
+    "isActive": "required|numeric",
+    "startDate": "required",
+    "endDate": "required",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "schemeMasterUpdate": {
+    "schemeId": "required|numeric",
+    "updatedDate": "datetime",
+    "name": "required|maxLength:101",
+    "code": "required|maxLength:11",
+    "uom": "required",
+    "isActive": "required|numeric",
+    "startDate": "required",
+    "endDate": "required",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "schemeWiseItemUpdate": {
+    "schemeId": "required|numeric",
+    "itemList": "required",
+    "updatedDate": "datetime",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "stockistMasterAdd": {
+    "stockistName": "required|maxLength:201",
+    "countryId": "required|numeric",
+    "stateId": "required|numeric",
+    "cityId": "required|numeric",
+    "dob": "dateFormat:YYYY-MM-DD",
+    "contactPerson": "required|maxLength:201",
+    "mobileNumber": "required|numeric",
+    "gstNumber": "required",
+    "loggedInEmployeeId": "required|numeric",
+    "dlNo": "required|maxLength:51",
+    "expiryDate": "required|dateFormat:YYYY-MM-DD"
+  },
+  "stockistMasterUpdate": {
+    "stockistId": "required|numeric",
+    "stockistName": "required|maxLength:201",
+    "countryId": "required|numeric",
+    "stateId": "required|numeric",
+    "cityId": "required|numeric",
+    "dob": "dateFormat:YYYY-MM-DD",
+    "contactPerson": "required|maxLength:201",
+    "mobileNumber": "required|numeric",
+    "gstNumber": "required",
+    "updatedDate": "datetime",
+    "loggedInEmployeeId": "required|numeric",
+    "dlNo": "required|maxLength:51",
+    "expiryDate": "required|dateFormat:YYYY-MM-DD"
+  },
+  "stockistMasterGetData": {
+    "loggedInEmployeeId": "required|numeric",
+    "isActive": "requiredIf:isStockistSearch,false|numeric",
+    "stateId": "requiredIf:isStockistSearch,false|numeric",
+    "search": "requiredIf:isStockistSearch,true"
+  },
+  "userPanelUpdate": {
+    "reportingPeriod": "required|numeric",
+    "loggedInEmployeeId": "required|numeric",
+    "employeeId": "required|numeric",
+    "updatedDate": "datetime"
+  },
+  "userPanelGet": {
+    "stateId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "itemPriceMasterAdd": {
+    "itemPriceData": "required|array",
+    "effectiveStartDate": "required|dateFormat:YYYY-MM-DD",
+    "updatedDate": "datetime",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "itemPriceMasterGet": {
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "itemPriceMasterDownload": {
+    "effectiveStartDate": "required|dateFormat:YYYY-MM-DD",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "gpsTracerAdd": {
+    "mobileModal": "required|maxLength:201",
+    "mobileTime": "required|datetime",
+    "data": "required|maxLength:11",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "gpsTracerGetByDateTimeAndEmployeeValidator": {
+    "serverDateTime": "required|datetime",
+    "employeeId": "required|numeric"
+  },
+
+  "startDay": {
+    "currentTime": "required|datetime",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "endDay": {
+    "currentTime": "required|datetime",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "leaveMasterAdd": {
+    "loggedInReferenceId": "required|numeric",
+    "LeaveType": "required",
+    "Category": "required",
+    "StartDate": "required|dateFormat:YYYY-MM-DD",
+    "EndDate": "required|dateFormat:YYYY-MM-DD",
+    "Reason": "required|maxLength:500"
+  },
+  "leaveMasterGet": {
+    "EmployeeId": "required"
+  },
+  "leaveMasterUpdate": {
+    "LeaveId": "required|numeric",
+    "LeaveType": "required",
+    "Category": "required",
+    "StartDate": "required|dateFormat:YYYY-MM-DD",
+    "EndDate": "required|dateFormat:YYYY-MM-DD",
+    "Reason": "required|maxLength:500"
+  },
+  "leaveMasterDelete": {
+    "LeaveId": "required|numeric"
+  },
+  "monthlyExpenseSummary": {
+    "EmployeeId": "required|numeric",
+    "month": "required"
+  },
+  "slTourPlanGet": {
+    "month": "required",
+    "year": "required",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "slTourPlanAdd": {
+    "month": "required",
+    "year": "required",
+    "slTourPlanData": "required|array",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "managerTourPlanGet": {
+    "month": "required",
+    "year": "required",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "managerTourPlanAdd": {
+    "month": "required",
+    "year": "required",
+    "managerTourPlanData": "required|array",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "askQueryData": {
+    "queryText": "required|maxLength:301",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "unlockDCRAdd": {
+    "unlockDate": "required|date",
+    "reason": "required|maxLength:501",
+    "statusId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "unlockDCRGet": {
+    "loggedInEmployeeId": "required|numeric",
+    "stateId": "required|numeric",
+    "employeeId": "required|numeric",
+    "date": "required|date"
+  },
+  "unlockDCRUpdate": {
+    "updateDate": "datetime",
+    "unlockDate": "required|date",
+    "adminRemarks": "required",
+    "loggedInEmployeeId": "required|numeric",
+    "employeeId": "required|numeric"
+  },
+  "getDcrPreview": {
+    "date": "required|date"
+  },
+  "expenseGetData": {
+    "loggedInEmployeeId": "required|numeric",
+    "effectiveDate": "required|date"
+  },
+  "expenseDetailsAdd": {
+    "expenseDate": "required|date",
+    "routeId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "expenseDetailsUpdate": {
+    "expenseJson": "required",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "tourPlanApprovalGet": { "loggedInEmployeeId": "required|numeric" },
+  "tourPlanApprovalUpdate": {
+    "loggedInEmployeeId": "required|numeric",
+    "managerRemarks": "requiredIf:status,35",
+    "status": "required|numeric",
+    "tourPlanId": "required|numeric",
+    "updatedDate": "datetime"
+  },
+  "stockistEmployeeMasterAdd": {
+    "stockistJsonArray": "required|array",
+    "employeeId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "stockistEmployeeMasterGet": {
+    "employeeId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "broadcastMobileNewsMasterAdd": {
+    "divisionIds": "required|array",
+    "stateIds": "required|array",
+    "designationIds": "required|array",
+    "message": "required|maxLength:111",
+    "startDate": "required|dateFormat:YYYY-MM-DD",
+    "endDate": "required|dateFormat:YYYY-MM-DD",
+    "isActive": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "broadcastMobileNewsMasterUpdate": {
+    "broadcastId": "required|numeric",
+    "divisionIds": "required|array",
+    "stateIds": "required|array",
+    "designationIds": "required|array",
+    "message": "required|maxLength:111",
+    "startDate": "required|dateFormat:YYYY-MM-DD",
+    "endDate": "required|dateFormat:YYYY-MM-DD",
+    "isActive": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "notificationInfoAdd": {
+    "employeeId": "numeric",
+    "divisionIds": "array",
+    "stateIds": "array",
+    "designationIds": "array",
+    "message": "required|maxLength:141",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "expenseApprovalGet": {
+    "month": "required|numeric",
+    "year": "required|numeric",
+    "divisionId": "required|numeric",
+    "stateId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "expenseApprovalGetByEmployeeId": {
+    "month": "required|numeric",
+    "year": "required|numeric",
+    "employeeId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "expenseApprovalUpdateOperation1": {
+    "operationType": "required|numeric",
+    "expenseDetailId": "required|numeric",
+    "ta": "numeric",
+    "dahq": "numeric",
+    "daos": "numeric",
+    "daex": "numeric",
+    "hotel": "numeric",
+    "updatedDate": "datetime",
+    "status": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "expenseApprovalUpdateOperation2": {
+    "operationType": "required|numeric",
+    "expenseDetailIds": "required",
+    "employeeId": "required|numeric",
+    "month": "required|numeric",
+    "year": "required|numeric",
+    "status": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "getMonthYearRangeLookUp": {
+    "startMonth": "numeric",
+    "endMonth": "numeric",
+    "startYear": "numeric",
+    "endYear": "numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "orderMasterGet": {
+    "stateId": "required|numeric",
+    "divisionId": "required|numeric",
+    "statusId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "orderMasterAdd": {
+    "loggedInEmployeeId": "required|numeric",
+    "orderMasterJson": "required",
+    "orderItemJson": "required"
+  },
+  "orderMasterStockistUpdate": {
+    "loggedInEmployeeId": "required|numeric",
+    "orderMasterJson": "required"
+  },
+  "transferRoutesGetData": {
+    "loggedInEmployeeId": "required|numeric",
+    "stateId": "required|numeric",
+    "fromEmployeeId": "required|numeric"
+  },
+  "transferRoutesUpdateData": {
+    "loggedInEmployeeId": "required|numeric",
+    "routeList": "required",
+    "fromEmployeeId": "required|numeric",
+    "toEmployeeId": "required|numeric"
+  },
+  "mergeRouteAdd": {
+    "routeName": "required",
+    "routeTypeId": "required",
+    "distanceFromHq": "required|numeric",
+    "tpVisitPerMonth": "required|numeric",
+    "routeIds": "required|array|minLength:2",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "tpVsAutoVsDCRExpenseReport": {
+    "month": "required|numeric",
+    "year": "required|numeric",
+    "employeeId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "tpVsAutoVsDCRExpenseMasterReport": {
+    "month": "required|numeric",
+    "year": "required|numeric",
+    "stateId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "leaveReport": {
+    "month": "required|numeric",
+    "year": "required|numeric",
+    "stateId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "gpsLocationHistoryReport": {
+    "callsType": "numeric",
+    "divisionIds": "required|numeric",
+    "stateIds": "numeric",
+    "designationIds": "numeric",
+    "traceDate": "required|dateFormat:YYYY-MM-DD",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "locationHistoryByEmployeeId": {
+    "traceDate": "required|dateFormat:YYYY-MM-DD",
+    "loggedInEmployeeId": "required|numeric",
+    "employeeId": "required|numeric"
+  },
+  "cululativeProductiveCallReport": {
+    "employeeId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "pobAddComment": {
+    "morningComments": "maxLength:1001|requiredWithout:eveningComments",
+    "eveningComments": "maxLength:1001|requiredWithout:morningComments",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "commentsGet": {
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "manageDCR": {
+    "employeeId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric",
+    "date": "required|date",
+    "password": "required|maxLength:11"
+  },
+  "isPOBSubmitCheck": {
+    "chemistId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "getRoutesForAddDCRLookup": {
+    "employeeIds": "required|array",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "chemistProfileGetData": {
+    "chemistId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "managerVsTeamReport": {
+    "managerId": "required|numeric",
+    "employeeId": "required|numeric",
+    "month": "required|numeric",
+    "year": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "tpVsActualRouteReport": {
+    "employeeId": "required|numeric",
+    "month": "required|numeric",
+    "year": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "routeMasterDownloadData": {
+    "employeeId": "required|numeric",
+    "stateId": "required|numeric",
+    "cityId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "routeLookupDataValidator": {
+    "employeeId": "required|numeric"
+    },
+  "routeMasterUploadData": {
+    "employeeId": "required|numeric",
+    "stateId": "required|numeric",
+    "cityId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "gpsLocationByLatLon": {
+    "lat": "required|numeric",
+    "lon": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "versionGet": {
+    "application": "required|numeric",
+    "currentVersion": "required|numeric"
+  },
+  "rewardGetDataByScheme": {
+    "schemeId": "required|numeric",
+    "uom": "numeric",
+    "chemistMobileNumber": "numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "rewardMasterAdd": {
+    "rewardName": "required",
+    "schemeId": "required|numeric",
+    "rewardDescription": "required",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "rewardMasterUpdate": {
+    "rewardId": "required|numeric",
+    "rewardName": "required",
+    "schemeId": "required|numeric",
+    "rewardDescription": "required",
+    "updatedDate": "datetime",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "invoiceMasterGet": {
+    "statusId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "invoiceMasterGetItemData": {
+    "invoiceId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "invoiceMasterGetForMobile": {
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "invoiceMasterGetDetail": {
+    "invoiceId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "invoiceMasterAdd": {
+    "invoiceMasterJson": "required|array",
+    "invoiceDetailJson": "array",
+    "invoiceMasterJson.*.stockistId": "required|numeric",
+    "invoiceMasterJson.*.chemistId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "invoiceMasterUpdate": {
+    "invoiceMasterJson": "required|array",
+    "invoiceDetailJson": "array",
+    "invoiceMasterJson.*.invoiceId": "required|numeric",
+    "invoiceMasterJson.*.updatedDate": "datetime",
+    "invoiceMasterJson.*.stockistId": "required|numeric",
+    "invoiceMasterJson.*.chemistId": "required|numeric",
+    "invoiceDetailJson.*.itemId": "numeric",
+    "invoiceDetailJson.*.qty": "numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "invoiceMasterUpdateStatus": {
+    "invoiceMasterJson": "required|array",
+    "invoiceDetailJson": "array",
+    "invoiceMasterJson.*.invoiceId": "required|numeric",
+    "invoiceMasterJson.*.status": "required|numeric",
+    "invoiceMasterJson.*.remarks": "required",
+    "invoiceMasterJson.*.updatedDate": "datetime",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "returnInvoiceUpdate": {
+    "invoiceMasterJson": "required|array",
+    "invoiceDetailJson": "array",
+    "invoiceMasterJson.*.invoiceId": "required|numeric",
+    "invoiceMasterJson.*.updatedDate": "datetime",
+    "invoiceMasterJson.*.stockistId": "required|numeric",
+    "invoiceDetailJson.*.itemId": "numeric",
+    "invoiceDetailJson.*.qty": "numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },  
+  "returnInvoiceUpdateStatus": {
+    "invoiceMasterJson": "required|array",
+    "invoiceDetailJson": "array",
+    "invoiceMasterJson.*.invoiceId": "required|numeric",
+    "invoiceMasterJson.*.status": "required|numeric",
+    "invoiceMasterJson.*.remarks": "required",
+    "invoiceMasterJson.*.updatedDate": "datetime",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "orderMasterGetByOrderId": {
+    "orderId": "required|numeric",
+    "loggedInAppIndication": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "orderMasterGetByDate": {
+    "fromDate": "date",
+    "toDate": "date",
+    "loggedInAppIndication": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "attendanceReport": {
+    "stateId": "required|numeric",
+    "date": "required|date",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "invoiceMasterCheckDuplicate": {
+    "invoiceNumber": "required",
+    "loggedInEmployeeId": "required|numeric",
+    "pageNo":"required|numeric"
+  },
+  "invoiceMasterGetMasterData": { "loggedInEmployeeId": "required|numeric" },
+  "orderMasterGetByStateCityStatus": {
+    "stateId": "numeric",
+    "cityId": "numeric",
+    "statusId": "numeric",
+    "month": "numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "getChemistByEmployeeIdLookup": { "loggedInEmployeeId": "required|numeric" },
+  "notificationInfoGetCount": { "loggedInEmployeeId": "required|numeric" },
+  "getTargetData": {
+    "employeeId": "required|numeric",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "getVideoData": {
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "updateVideoStartTime": {
+    "loggedInEmployeeId": "required|numeric",
+    "videoId":"required|numeric",
+    "videoStartTime":"required"
+  },
+  "updateVideoIsLike": {
+    "loggedInEmployeeId": "required|numeric",
+    "videoId":"required|numeric",
+    "isLike":"required|numeric"
+  },
+  "getCommentOfVideo": {
+    "loggedInEmployeeId": "required|numeric",
+    "videoId":"required|numeric"
+  },
+  "saveCommentOfVideo": {
+    "loggedInEmployeeId": "required|numeric",
+    "videoId":"required|numeric",
+    "comment":"required|maxLength:1000"
+  },
+  "saveVideoSeriesDetail": {
+    "loggedInEmployeeId": "required|numeric",
+    "isActive":"required|numeric",
+    "seriesName":"required|maxLength:200"
+  },
+  "getVideoMasterValidator": {
+    "seriesId": "required|numeric"
+  },
+  "saveVideoValidator": {
+    "loggedInEmployeeId":"required|numeric",
+    "seriesId": "required|numeric",
+    "videoPlaceholder":"required|maxLength:200", 
+    "videoTitle":"required|maxLength:500", 
+    "videoUrl":"required|maxLength:500", 
+    "videoDuration":"required", 
+    "isActive":"required|numeric"
+  },
+  "validateSaveDocumentTypeData": {
+    "loggedInEmployeeId":"required|numeric",
+    "documentType": "required|maxLength:100",
+    "isActive":"required|numeric"
+  },
+  "validateUpdateDocumentTypeData": {
+    "loggedInEmployeeId":"required|numeric",
+    "documentTypeId": "required|numeric",
+    "isActive":"required|numeric"
+  },
+  "validateInsertChemistUpdateProfile": {
+    "loggedInEmployeeId":"required|numeric",
+    "chemistProfileObject": "required",
+    "chemistId":"required"
+  },
+  "validateGetExpenseMonthlySummary": {
+    "loggedInEmployeeId":"required|numeric",
+    "year": "required|numeric",
+    "month":"required|numeric"
+  },
+  "validateSaveTandC": {
+    "loggedInEmployeeId":"required|numeric",
+    "tandcBody": "required"
+  },
+  "validateGetFeaturesRights": {
+    "loggedInEmployeeId":"required|numeric",
+    "loggedInAppIndication":"required|numeric"
+  },
+  "validateSaveFeatures": {
+    "roleIds":"required"
+  },
+  "validateSaveSurveyData": {
+    "surveyName":"required|maxLength:100",
+    "isActive":"required|numeric",
+    "startDate":"required",
+    "endDate":"required"
+  },
+  "validateSaveSurveyQuestion": {
+    "surveyId":"required|numeric",
+    "questionText":"required|maxLength:2000",
+    "groupId":"required|numeric",
+    "isMandatory":"required|numeric",
+    "sequence":"required|numeric"
+  },
+  "validateSaveQuestionTypeDetailData": {
+    "groupCode":"required",
+    "questionTypeId":"required|numeric",
+    "valueOptionsJson":"required"
+  },
+  "validateSaveAnswerData": {
+    "surveyId":"required|numeric",
+    "surveyAnswerJson":"required"
+  },
+  "validateSaveSurveyCopy": {
+    "oldSurveyId":"required|numeric",
+    "surveyName":"required|maxLength:100",
+    "startDate":"required",
+    "endDate":"required"
+  },
+  "surveyReportGetData": {
+    "cityId": "required|numeric",
+    "stateId": "required|numeric"
+  },
+  "validatesurveyReportGetDataById": {
+    "questionId": "required:numeric"
+  },
+  "validateSaveSelfieData": {
+    "selfieImage":"required"
+  },
+  "validateUpdateSelfieData": {
+    "selfieId": "required:numeric",
+    "status": "required:numeric"
+  },
+  "validateGetMenuRoleData": {
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "validateSaveEmployeewiseChemistSorting": {
+    "chemistList": "required"
+  },
+  "validateClaimRewardReport": {
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "validateItemWiseSalesReport": {
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "validateTopCustomerReport": {
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "validateGPSSMSTrack": {
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "validatePrimaryVsSecondary": {
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "validateSmartSetuApp": {
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "validatePrimaryVsClaim": {
+    "loggedInEmployeeId": "required|numeric"
+  
+  },
+  "validateEmployeeRefMappingReport": {
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "qrMasterAddValidate": {
+    "name": "required|maxLength:51",
+    "description": "required|maxLength:501",
+    "point": "required",
+    "sequenceCode":"required",
+    "startDate": "required",
+    "endDate": "required",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "qrMasterUpdateValidate": {
+    "qrMasterId": "required|numeric",
+    "updatedDate": "datetime",
+    "name": "required|maxLength:51",
+    "sequenceCode":"required",
+    "description": "required|maxLength:501",
+    "point": "required",
+    "startDate": "required",
+    "endDate": "required",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "qrMasterDeleteValidate": {
+    "qrMasterId": "required|numeric",
+    "updatedDate": "datetime",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "qrMasterGenerateQRCodeValidate": {
+    "qrMasterId": "required|numeric",
+    "numberOfPrints": "required|numeric",
+    "updatedDate": "datetime",
+    "loggedInEmployeeId": "required|numeric",
+    "qrCodes":"required"
+  },
+  "qrMasterPrintDownloadValidate": {
+    "qrMasterId": "required|numeric",
+    "numberOfPrints": "required|numeric",
+    "updatedDate": "datetime",
+    "loggedInEmployeeId": "required|numeric",
+    "qrCodes":"required",
+    "numberOfColumns" : "required|numeric"
+  },
+  "customerAddValidate": {
+    "customerName": "required|maxLength:51",
+    "mobileNumber": "required|maxLength:13",
+    "address":"required",
+    "category": "required",
+    "homeDelivery": "required",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "customerUpdateValidate": {
+    "customerId" : "required|numeric",
+    "customerName": "required|maxLength:51",
+    "mobileNumber": "required|maxLength:13",
+    "address":"required",
+    "category": "required",
+    "homeDelivery": "required",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "customerDeleteValidate": {
+    "customerId": "required|numeric",
+    "updatedDate": "datetime",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "prescriptionAddValidate": {
+    "customerId": "required",
+    "prescriptionDate": "required",
+    "images": "required",
+    "notificationType": "required",
+    "loggedInEmployeeId": "required"
+  },
+  "prescriptionUpdateValidate": {
+    "customerId": "required",
+    "prescriptionDate": "required",
+    "images": "required",
+    "notificationType": "required",
+    "loggedInEmployeeId": "required"
+  },
+  "prescriptionDeleteValidate": {
+    "customerPrescriptionId": "required|numeric",
+    "updatedDate": "datetime",
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "closingStockReport": {
+    "loggedInEmployeeId": "required|numeric",
+    "depotCode": "required"
+  },
+  "validateSalesReport": {
+    "loggedInEmployeeId": "required|numeric",
+    "depotCode": "required",
+    "stateId": "required"
+  },
+  "validateOutstandingReport": {
+    "loggedInEmployeeId": "required|numeric",
+    "depotCode": "required",
+    "stateId": "required"
+  },
+  "validateStockistEmployeeMasterGet": {
+    "loggedInEmployeeId": "required|numeric"
+  },
+  "guestMasterGetData": {
+    "userName": "required"
+  },
+  "guestMasterAdd": {
+    "firstName": "required|maxLength:151",
+    "lastName": "required|maxLength:151",
+    "middleName": "required|maxLength:151",
+    "dob": "required|dateFormat:YYYY-MM-DD",
+    "stateId": "required|numeric",
+    "cityId": "required|numeric",
+    "mobileNumber": "required|numeric",
+    "loggedInReferenceId": "required|numeric"
+  },
+  "guestMasterUpdate": {
+    "firstName": "required|maxLength:151",
+    "lastName": "required|maxLength:151",
+    "middleName": "required|maxLength:151",
+    "dob": "required|dateFormat:YYYY-MM-DD",
+    "stateId": "required|numeric",
+    "cityId": "required|numeric",
+    "mobileNumber": "required|numeric",
+    "loggedInReferenceId": "required|numeric"
+  },
+  "roomCategorySave": {
+    "categoryName": "required",
+    "effectiveDate": "required|datetime"
+  },
+  "roomMasterSave": {
+    "roomName": "required",
+    "roomStatus": "required",
+    "categoryId": "required"
+  },
+  "dietMasterSave": {
+    "dietName": "required",
+    "DiseaseId": "required",
+	"updatedDate": "datetime"
+  },
+  "templeteSave": {
+    "templateName": "required"
+  },
+  "keyMasterSave": {
+    "keyNo": "required"    
+  },
+  "amenityMasterSave": {
+    "name": "required"    
+  },
+  "treatmentMaster": {
+    "Status": "required",
+    "TreatmentName": "required"
+  },
+  "TreatmentMasterDelete": {
+    "loggedInEmployeeId": "required|numeric",
+    "TreatmentID": "required|numeric"
+  },
+  "diseaseMasterSave": {
+    "diseaseName" : "required"
+  },
+  "therapyTypeMaster":{
+      "typeName": "required"
+  },
+  "addManageBooking":{
+    "guestId" :"required",
+    "guestBookingDetails":"required",
+    "bookingRoomAssign":"required"
+  },
+  "UpdateManageBooking":{
+    "guestId" :"required",
+    "bookingId":"required",
+    "guestBookingDetails":"required",
+    "bookingRoomAssign":"required"
+  },
+  "DeleteManageBooking":{
+    "bookingId":"required",
+    "loggedInUserId":"required"
+  },
+  "TreatmentRoomMasterAdd":{
+    "isActive":"required",
+    "roomName":"required",
+    "locationId":"required|numeric",
+    "TreatmentId":"required"
+    },
+    "TreatmentRoomMasterDelete": {
+      "loggedInUserId": "required",
+      "TreatmentRoomId": "required"
+    },
+    "DailyTherapyGet":{
+      "date" :"required"
+    },
+    "DailyTherapyUpdate":{
+      "date" :"required",
+      "GuestId":"required"
+    },
+    "MemberShipMasterAdd":{
+      "effectiveDate": "required",
+      "memberShipData": "required"
+    },
+    "MemberShipMasterUpdate":{
+      "effectiveDate": "required",
+      "memberShipData": "required"
+    },
+    "MemberShipMasterDelete":{
+      "effectiveDate": "required",
+      "loggedInUserId": "required"
+    }
+}

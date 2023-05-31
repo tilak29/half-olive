@@ -1,0 +1,23 @@
+.LegendContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.SingleLegendWrap {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.SingleLegendWrap:last-child {
+  margin-right: 0;
+}
+.LegendBox {
+  height: 18px;
+  width: 18px;
+  display: inline-block;
+  border: 2px solid #e3e6e9;
+  margin-right: 5px;
+}
+.LegendLabel {
+  font-size: 13px;
+}

@@ -1,0 +1,15 @@
+Exact-number data types that use integer data, So For Id it is convenient to use Int Datatype.
+
+And There are some type of integer Datatype :
+
+1. BIGINT   -9,223,372,036,854,775,808  to 9,223,372,036,854,775,807 	8 Bytes
+2. INT      -2,147,483,648 to 		to 2,147,483,647 		4 Bytes
+3. SMALLINT -32,768 			to 32,767			2 Bytes
+4. TINYINT   0 				to 255				1 Byte
+
+
+- So to save space in the database, use the smallest data type that can reliably contain all possible values : here, for LocationId i will give it from 1 and increment   with 1 So Int Max Length is 0 to 4294967295 So For now it sufficient range to store LocationId As INT.
+
+- And Big Int is Used For if there is large amount of value if we have to give then we have to use Big Int For eg.: Bank Account Number.
+
+- And For Small amount value we have to store then we have to store the TINYINT For eg.: age of any person because no one lives to be more than 255 years.

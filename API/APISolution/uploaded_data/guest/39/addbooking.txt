@@ -1,0 +1,59 @@
+DECLARE @Code VARCHAR(10)= (SELECT Code FROM companymaster WHERE CompanyId=${CompanyId})
+
+  INSERT INTO [dbo].[bookingDetails]
+             ([CompanyId],[GuestId],[BookingReferenceCode],[StartDate],[EndDate],[BookingStatus],[CreatedBy],[CreatedDate])
+       VALUES 
+        (${CompanyId},${jsdata.guestId},@Code,'${jsdata.startDate}','${jsdata.endDate}',${jsdata.bookingStatus},${jsdata.loggedInUserId},GETDATE())
+  
+  DECLARE @BookingId int = (SELECT TOP(1)BookingId FROM bookingDetails ORDER BY BookingId DESC)
+  
+  DECLARE @BookingRefrenceCode VARCHAR(10)=(SELECT concat(@Code,( YEAR( GETDATE() ) % 100 ),RIGHT('0' + RTRIM(MONTH( GETDATE() )), 2),@BookingId))
+  
+  UPDATE bookingDetails set BookingReferenceCode = @BookingRefrenceCode WHERE BookingId = @BookingId
+  
+  DECLARE @BookingRoomAssignXMLData XML
+    SET @BookingRoomAssignXMLData = '${BookingRoomAssignXML}'
+  DECLARE @BookingRoomAssignTable AS TABLE
+  (
+    roomId INT,
+    keyId INT,
+    startDate SMALLDATETIME,
+    endDate SMALLDATETIME,
+    roomStatus INT
+  )
+  
+  INSERT INTO @BookingRoomAssignTable
+  SELECT 
+      d.v.value('roomId[1]','INT'),
+      d.v.value('keyId[1]','INT'),
+      d.v.value('startDate[1]','SMALLDATETIME'),
+      d.v.value('endDate[1]','SMALLDATETIME'),
+      d.v.value('roomStatus[1]','INT')
+    FROM @BookingRoomAssignXMLData.nodes('/ArrayOfBookingRoomAssign/item') d(v)
+  
+  
+  INSERT INTO [dbo].[BookingRoomAssignment]
+             ([BookingId],[RoomId],[KeyId],[StartDate],[EndDate],[BookingStatus],[CreatedBy],[CreatedDate])
+            select @BookingId,roomId,keyId,startDate,endDate,roomStatus,${jsdata.loggedInUserId},GETDATE() from
+  (select * from @BookingRoomAssignTable) as data
+  
+  DECLARE @GuestBookingDetailsXMLData XML
+    SET @GuestBookingDetailsXMLData = '${GuestBookingDetailsXML}'
+  DECLARE @GuestBookingDetailsTable as table
+  (
+    guestId INT,
+    roomId INT,
+    treatment BIT
+  )
+  
+  INSERT INTO @GuestBookingDetailsTable
+  SELECT 
+      d.v.value('guestId[1]','INT'),
+      d.v.value('roomId[1]','INT'),
+      d.v.value('treatment[1]','BIT')
+    FROM @GuestBookingDetailsXMLData.nodes('/ArrayOfGuestBookingDetails/item') d(v)
+  
+    INSERT INTO [dbo].[GuestBookingDetails]
+    ([BookingId],[BookingRoomAssignId],[GuestId],[Treatment],[CreatedBy],[CreatedDate])
+SELECT @BookingId,BookingRoomAssignmentId,guestId,treatment,${jsdata.loggedInUserId},GETDATE() FROM
+(SELECT GBDT.guestId,GBDT.treatment,BRA.BookingRoomAssignmentId FROM @GuestBookingDetailsTable AS GBDT INNER JOIN BookingRoomAssignment AS BRA ON GBDT.roomId = BRA.RoomId WHERE BRA.BookingId=@BookingId) AS DATA
